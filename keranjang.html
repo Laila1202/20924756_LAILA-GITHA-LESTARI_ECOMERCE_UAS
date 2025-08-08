@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keranjang Belanja</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Keranjang Belanja</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produk1.html">Produk</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Isi Keranjang:</h2>
+    <ul id="daftarKeranjang"></ul>
+    <p><strong>Total: Rp <span id="totalHarga">0</span></strong></p>
+  </main>
+
+  <footer>
+    <p>Kontak: email@Lailagitalestary.com | 081572098560 | Jl. Gamon No. 012</p>
+  </footer>
+
+  <script>
+    function tampilkanKeranjang() {
+      let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+      let daftar = document.getElementById("daftarKeranjang");
+      let total = 0;
+
+      if (keranjang.length === 0) {
+        daftar.innerHTML = "<li>Keranjang kosong</li>";
+      } else {
+        keranjang.forEach((item) => {
+          let li = document.createElement("li");
+          li.textContent = item.nama + " - Rp" + item.harga;
+          daftar.appendChild(li);
+          total += item.harga;
+        });
+      }
+
+      document.getElementById("totalHarga").textContent = total.toLocaleString();
+    }
+
+    tampilkanKeranjang();
+  </script>
+</body>
+</html>
