@@ -3,10 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toko Online - Home</title>
+  <title>Toko Gita Lestari - Home</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Tambahan CSS sederhana */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cart-icon {
+      font-size: 24px;
+      color: #f39c12;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .produk-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .produk {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .produk img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .produk h2 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .produk p {
+      margin: 5px 0;
+    }
+
+    .produk a, .produk button {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      text-decoration: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Toko Gita Lestari</h1>
     <nav>
@@ -14,58 +106,66 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="produk1.html">Produk</a></li>
         <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="keranjang.html" class="cart-icon">🛒</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="produk-list">
-   
-
     <section class="produk">
-      <img src="images/croptop.jpg" alt="Produk 2">
+      <img src="images/croptop.jpg" alt="croptop">
       <h2>croptop</h2>
       <p>Rp65.000</p>
-      <p>Deskripsi singkat produk 2.</p>
+      <p>Atasan stylish cocok untuk remaja kekinian.</p>
       <a href="produk2.html">Lihat Detail</a>
+      <br><br>
+      <a href="keranjang.html">+ Tambah ke Keranjang</a>
     </section>
 
     <section class="produk">
-      <img src="images/baju anak kecil.jpg" alt="Produk 3">
-      <h2>baju anak kecil</h2>
+      <img src="images/baju anak kecil.jpg" alt="baju anak kecil">
+      <h2>Baju Anak Kecil</h2>
       <p>Rp75.000</p>
-      <p>Deskripsi singkat produk 3.</p>
+      <p>Baju lucu dan nyaman untuk anak-anak.</p>
       <a href="produk3.html">Lihat Detail</a>
+      <br><br>
+      <a href="keranjang.html">+ Tambah ke Keranjang</a>
     </section>
 
     <section class="produk">
-      <img src="images/kemeja.jpg"alt="Produk 4">
-      <h2>kemeja</h2>
+      <img src="images/kemeja.jpg" alt="kemeja">
+      <h2>Kemeja</h2>
       <p>Rp90.000</p>
-      <p>Deskripsi singkat produk 4.</p>
+      <p>Kemeja keren cocok untuk acara formal dan kasual.</p>
       <a href="produk4.html">Lihat Detail</a>
+      <br><br>
+      <a href="keranjang.html">+ Tambah ke Keranjang</a>
     </section>
 
     <section class="produk">
-    <img src="images/kaos.jpg" alt="Produk 5">
-      <h2>kaos
-    
-      </h2>
+      <img src="images/kaos.jpg" alt="kaos">
+      <h2>Kaos</h2>
       <p>Rp100.000</p>
-      <p>Deskripsi singkat produk 5.</p>
+      <p>Kaos simple dan nyaman dipakai sehari-hari.</p>
       <a href="produk5.html">Lihat Detail</a>
+      <br><br>
+      <a href="keranjang.html">+ Tambah ke Keranjang</a>
     </section>
 
     <section class="produk">
-      <img src="images/jaket.jpg" alt="Produk 6">
-      <h2>jaket</h2>
+      <img src="images/jaket.jpg" alt="jaket">
+      <h2>Jaket</h2>
       <p>Rp120.000</p>
-      <p>Deskripsi singkat produk 6.</p>
+      <p>Jaket hangat dan modis untuk cuaca dingin.</p>
       <a href="produk6.html">Lihat Detail</a>
+      <br><br>
+      <a href="keranjang.html">+ Tambah ke Keranjang</a>
     </section>
   </main>
 
   <footer>
-    <p>Kontak: email@Lailagitalestary.com | 081572098560 | Jl.gamon No. 012</p>
+    <p>Kontak: email@lailagitalestary.com | 0815-7209-8560 | Jl. Gamon No. 012</p>
   </footer>
+
 </body>
 </html>
